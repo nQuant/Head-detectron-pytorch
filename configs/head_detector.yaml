@@ -1,5 +1,5 @@
 MODEL:
-  #NUM_CLASSES: 2
+  NUM_CLASSES: 2
   TYPE: generalized_rcnn
   CONV_BODY: FPN.fpn_ResNet50_conv5_body
   FASTER_RCNN: True
