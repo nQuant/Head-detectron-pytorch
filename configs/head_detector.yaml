@@ -4,7 +4,7 @@ MODEL:
   CONV_BODY: FPN.fpn_ResNet50_conv5_body
   FASTER_RCNN: True
 RESNETS:
-  IMAGENET_PRETRAINED_WEIGHTS: 'data/pretrained_model/vgg16_caffe.pth'
+  IMAGENET_PRETRAINED_WEIGHTS: 'data/pretrained_model/resnet50_caffe.pth'
 NUM_GPUS: 1
 SOLVER:
   WEIGHT_DECAY: 0.0001
