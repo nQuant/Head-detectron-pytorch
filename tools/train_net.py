@@ -162,7 +162,7 @@ def main():
         cfg.MODEL.NUM_CLASSES = 2
     elif args.dataset == "scuthead_a":
         cfg.TRAIN.DATASETS = ('scuthead_a',)
-        cfg.MODEL.NUM_CLASSES = 2
+        #cfg.MODEL.NUM_CLASSES = 2
     else:
         raise ValueError("Unexpected args.dataset: {}".format(args.dataset))
 
