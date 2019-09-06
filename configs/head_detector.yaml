@@ -41,9 +41,10 @@ FAST_RCNN:
   ROI_XFORM_RESOLUTION: 7
   ROI_XFORM_SAMPLING_RATIO: 2
 TRAIN:
-  #DATASETS: ('scuthead_a','scuthead_b','pascal_parts_heads',)
+  DATASETS: ('scuthead_a','scuthead_b','pascal_parts_heads',)
   #DATASETS: ('scuthead_a','scuthead_b',)
-  DATASETS: ('pascal_parts_heads',)
+  #DATASETS: ('pascal_parts_heads',)
+  ASPECT_GROUPING: False
   SCALES: (500,)
   MAX_SIZE: 833
   BATCH_SIZE_PER_IM: 256
