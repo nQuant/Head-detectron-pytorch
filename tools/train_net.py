@@ -203,10 +203,12 @@ def main():
     timers = defaultdict(Timer)
 
     ### Dataset ###
+    print("Checkpoint 0")
     timers['roidb'].tic()
     roidb, ratio_list, ratio_index = combined_roidb_for_training(
         cfg.TRAIN.DATASETS, cfg.TRAIN.PROPOSAL_FILES)
     timers['roidb'].toc()
+    print("Checkpoint 1")
     train_size = len(roidb)
     logger.info('{:d} roidb entries'.format(train_size))
     logger.info('Takes %.2f sec(s) to construct roidb', timers['roidb'].average_time)
