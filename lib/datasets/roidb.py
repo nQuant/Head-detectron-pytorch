@@ -59,11 +59,14 @@ def combined_roidb_for_training(dataset_names, proposal_files):
     if len(proposal_files) == 0:
         proposal_files = (None, ) * len(dataset_names)
     assert len(dataset_names) == len(proposal_files)
+    
+    print("Checkpoint ROIDB 0")
     roidbs = [get_roidb(*args) for args in zip(dataset_names, proposal_files)]
     roidb = roidbs[0]
     for r in roidbs[1:]:
         roidb.extend(r)
     roidb = filter_for_training(roidb)
+    print("Checkpoint ROIDB 1")
 
     if cfg.TRAIN.ASPECT_GROUPING or cfg.TRAIN.ASPECT_CROPPING:
         logger.info('Computing image aspect ratios and ordering the ratios...')
