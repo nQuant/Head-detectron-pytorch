@@ -45,6 +45,7 @@ TRAIN:
   #DATASETS: ('scuthead_a','scuthead_b',)
   #DATASETS: ('pascal_parts_heads',)
   ASPECT_GROUPING: False
+  USE_FLIPPED: False
   SCALES: (500,)
   MAX_SIZE: 833
   BATCH_SIZE_PER_IM: 256
