@@ -42,8 +42,8 @@ FAST_RCNN:
   ROI_XFORM_SAMPLING_RATIO: 2
 TRAIN:
   #DATASETS: ('scuthead_a','scuthead_b','pascal_parts_heads',)
-  #DATASETS: ('scuthead_a','scuthead_b',)
-  DATASETS: ('pascal_parts_heads',)
+  DATASETS: ('scuthead_b',)
+  #DATASETS: ('pascal_parts_heads',)
   #ASPECT_GROUPING: False
   #USE_FLIPPED: False
   SCALES: (500,)
