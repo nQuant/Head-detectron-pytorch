@@ -43,7 +43,7 @@ FAST_RCNN:
 TRAIN:
   #DATASETS: ('scuthead_a','scuthead_b','pascal_parts_heads',)
   #DATASETS: ('scuthead_a','scuthead_b',)
-  DATASETS: ('pascal_parts_heads','scuthead_b',)
+  DATASETS: ('pascal_parts_heads')
   #ASPECT_GROUPING: False
   #USE_FLIPPED: False
   SCALES: (500,)
