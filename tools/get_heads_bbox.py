@@ -149,7 +149,7 @@ def main():
         cls_boxes, cls_segms, cls_keyps = im_detect_all(maskRCNN, im, timers=timers)
 
         im_name, _ = os.path.splitext(os.path.basename(imglist[i]))
-        outputfile=os.path.join(output_dir,im_name)
+        outputfile=os.path.join(args.output_dir,im_name)
         np.save(outputfile,cls_boxes)
 
 if __name__ == '__main__':
