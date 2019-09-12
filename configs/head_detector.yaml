@@ -30,10 +30,13 @@ SOLVER:
   #   BASE_LR: 0.02
   #   MAX_ITER: 7500
   #   STEPS: [0, 3750, 5000]
+#RPN:
+  
 FPN:
   FPN_ON: True
   MULTILEVEL_ROIS: True
   MULTILEVEL_RPN: True
+  RPN_ASPECT_RATIOS : [1]
   RPN_ANCHOR_START_SIZE: 8
 FAST_RCNN:
   ROI_BOX_HEAD: fast_rcnn_heads.roi_2mlp_head
@@ -42,12 +45,13 @@ FAST_RCNN:
   ROI_XFORM_SAMPLING_RATIO: 2
 TRAIN:
   #DATASETS: ('scuthead_a','scuthead_b','pascal_parts_heads',)
-  DATASETS: ('scuthead_b',)
+  DATASETS: ('scuthead_a','scuthead_b',)
+  #DATASETS: ('scuthead_b',)
   #DATASETS: ('pascal_parts_heads',)
   #ASPECT_GROUPING: False
   #USE_FLIPPED: False
-  SCALES: (500,)
-  MAX_SIZE: 833
+  SCALES: (1024,)
+  MAX_SIZE: 1024
   BATCH_SIZE_PER_IM: 256
   RPN_PRE_NMS_TOP_N: 2000  # Per FPN level
 TEST:
