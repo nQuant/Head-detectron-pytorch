@@ -150,7 +150,9 @@ def main():
 
         im_name, _ = os.path.splitext(os.path.basename(imglist[i]))
         outputfile=os.path.join(args.output_dir,im_name)
-        np.save(outputfile,cls_boxes)
+        
+        head_boxes=cls_boxes[1]
+        np.save(outputfile, head_boxes)
 
 if __name__ == '__main__':
     main()
