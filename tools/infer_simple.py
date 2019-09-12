@@ -72,7 +72,7 @@ def parse_args():
         help='directory to save demo results',
         default="infer_outputs")
     parser.add_argument(
-        '--merge_pdfs', type=distutils.util.strtobool, default=True)
+        '--merge_pdfs', type=distutils.util.strtobool, default=False)
 
     args = parser.parse_args()
 
