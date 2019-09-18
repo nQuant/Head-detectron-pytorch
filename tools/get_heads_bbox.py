@@ -138,7 +138,7 @@ def main():
         os.makedirs(args.output_dir)
 
     for i in xrange(num_images):
-        print('img', i)
+        
         im = cv2.imread(imglist[i])
         assert im is not None
 
@@ -150,6 +150,7 @@ def main():
         outputfile=os.path.join(args.output_dir,im_name)
         
         head_boxes=cls_boxes[1]
+        print('img :', i, '   num_heads :', len(head_boxes), ' img_path :', imglist[i])
         np.save(outputfile, head_boxes)
 
 if __name__ == '__main__':
