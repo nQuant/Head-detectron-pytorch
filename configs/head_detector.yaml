@@ -13,25 +13,6 @@ SOLVER:
   GAMMA: 0.1
   MAX_ITER: 60000
   STEPS: [0, 30000, 40000]
-  # Equivalent schedules with...
-  # 1 GPU:
-  #   BASE_LR: 0.0025
-  #   MAX_ITER: 60000
-  #   STEPS: [0, 30000, 40000]
-  # 2 GPUs:
-  #   BASE_LR: 0.005
-  #   MAX_ITER: 30000
-  #   STEPS: [0, 15000, 20000]
-  # 4 GPUs:
-  #   BASE_LR: 0.01
-  #   MAX_ITER: 15000
-  #   STEPS: [0, 7500, 10000]
-  # 8 GPUs:
-  #   BASE_LR: 0.02
-  #   MAX_ITER: 7500
-  #   STEPS: [0, 3750, 5000]
-#RPN:
-  
 FPN:
   FPN_ON: True
   MULTILEVEL_ROIS: True
@@ -46,12 +27,7 @@ FAST_RCNN:
   ROI_XFORM_RESOLUTION: 7
   ROI_XFORM_SAMPLING_RATIO: 2
 TRAIN:
-  #DATASETS: ('scuthead_a','scuthead_b','pascal_parts_heads',)
-  DATASETS: ('scuthead_a','scuthead_b',)
-  #DATASETS: ('scuthead_b',)
-  #DATASETS: ('pascal_parts_heads',)
-  #ASPECT_GROUPING: False
-  #USE_FLIPPED: False
+  DATASETS: ('scuthead_a','scuthead_b','pascal_parts_heads',)
   SCALES: (1024,)
   MAX_SIZE: 1024
   BATCH_SIZE_PER_IM: 256
